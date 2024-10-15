@@ -1,8 +1,34 @@
 @import url("variables.css");
 
+/* ---- ---- Default H1 and H2 ---- ---- */
+
+.genericH1,
+.genericH2 {
+  color: var(--color1)
+}
+
+.genericH1 {
+  font-size: var(--headerFontSize);
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin-top: var(--sectionPadding);
+}
+
+.genericH2 {
+  font-size: var(--standaloneFontSize);
+  text-align: justify;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  float: left;
+}
+
 /* ---- ---- Default Container ---- ---- */
 
-.defaultContainer, .defaultButtonContainer, .defaultDropdownContainer {
+.defaultContainer,
+.defaultButtonContainer,
+.defaultDropdownContainer {
   width: calc(var(--sideBarWidth) - 2 * var(--subSectionPadding));
   padding: calc(var(--subSectionPadding) * 0.5);
   border-radius: var(--standardRadius);
@@ -11,7 +37,8 @@
 
 /* ---- ---- Default Button and Default Dropdown ---- ---- */
 
-.defaultButtonContainer, .defaultDropdownContainer {
+.defaultButtonContainer,
+.defaultDropdownContainer {
   transition-duration: 100ms;
   margin-left: var(--subSectionPadding);
   margin-bottom: var(--subSectionPadding);
@@ -31,17 +58,18 @@
   font-size: var(--standardFontSize);
 }
 
-.defaultButtonContainer:hover, .defaultDropdownContainer:hover {
+.defaultButtonContainer:hover,
+.defaultDropdownContainer:hover {
   transition-duration: 100ms;
   padding: 0;
 }
 
 .defaultButtonContainer:hover {
   box-shadow: var(--noAddordanceShadow_hover);
-  background: rgb(100, 100, 100);
 }
 
-.defaultButtonContainer:hover .defaultButton, .defaultDropdownContainer:hover .defaultButton {
+.defaultButtonContainer:hover .defaultButton,
+.defaultDropdownContainer:hover .defaultButton {
   transition-duration: 100ms;
   background: var(--physicalAffordanceBackground_hover);
   box-shadow: var(--physicalAffordanceShadow_hover);
@@ -52,19 +80,17 @@
 
 /* ---- ---- Goal Bar ---- ---- */
 
-.goalBarContainer, .goalDivider, .subGoalContainer {
+.goalBarContainer,
+.goalDivider,
+.subGoalContainer {
   height: calc((var(--topBarHeight) - 3 * var(--subSectionPadding)) * 0.5);
 }
 
 .goalBarContainer {
   /* Origonal styling => w-full bg-gray-200 rounded-lg h-6 relative */
   width: 100%;
-  background: rgb(211, 211, 211);
   border-radius: var(--standardRadius);
   position: relative;
-}
-
-.goalBarContainer {
   padding: 3px;
   background: var(--noAffordanceBackground);
   box-shadow: var(--noAffordanceShadow);
@@ -80,14 +106,14 @@
 }
 
 .goalDivider {
-/* Origonal styling => absolute border-l border-gray-400 */
+  /* Origonal styling => absolute border-l border-gray-400 */
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.3);
   top: 0;
 }
 
 .subGoalContainer {
-/* Origonal styling => absolute w-full flex justify-between -top-6 */
+  /* Origonal styling => absolute w-full flex justify-between -top-6 */
   position: absolute;
   width: 100%;
   display: flex;
@@ -99,8 +125,22 @@
     ${Number(balance) >= Number(subgoal) ? "text-green-700 border-green-500" : "text-gray-300 border-gray-300"} 
     border rounded px-1`} */
 
-.subGoal, .subGoalCompleted {
+.subGoal,
+.subGoalCompleted {
   text-align: center;
   width: 0;
   position: relative;
+}
+
+/* ---- ---- Scrollable Content Section Spacer ---- ----*/
+
+.defaultHeader {
+  background-color: var(--color3);
+  border-radius: var(--standardRadius);
+  box-shadow: var(--noAddordanceShadow_hover);
+  font-size: var(--headerFontSize);
+  margin-top: var(--sectionPadding);
+  margin-bottom: var(--sectionPadding);
+  color: var(--color2);
+  text-align: center;
 }
